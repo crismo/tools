@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Game Design Playtest Worksheet</title>
+    <style>
+      :root {
+        --ink: #111;
+        --muted: #555;
+        --line: #d6d6d6;
+        --accent: #0f766e;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        color: var(--ink);
+        font: 16px/1.45 Roboto, Ubuntu, "Helvetica Neue", Arial;
+      }
+      .page {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 28px 24px;
+      }
+      header h1 {
+        font-size: 1.6rem;
+        margin: 0 0 0.25rem 0;
+        letter-spacing: 0.3px;
+      }
+      header p {
+        margin: 0.1rem 0;
+        color: var(--muted);
+      }
+      hr {
+        border: 0;
+        border-top: 1px solid var(--line);
+        margin: 18px 0;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+      }
+      .row {
+        display: grid;
+        grid-template-columns: 160px 1fr;
+        gap: 10px;
+        align-items: center;
+        margin: 6px 0;
+      }
+      label {
+        font-weight: 600;
+      }
+      input[type="text"] {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+      }
+      textarea {
+        width: 100%;
+        min-height: 90px;
+        padding: 10px;
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        resize: vertical;
+      }
+      .section {
+        margin: 18px 0 10px;
+      }
+      .section h2 {
+        font-size: 1.2rem;
+        margin: 0 0 6px 0;
+        border-left: 4px solid var(--accent);
+        padding-left: 8px;
+      }
+      .inline-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      .chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 6px 10px;
+      }
+      .chip input {
+        margin: 0;
+      }
+      .small {
+        font-size: 0.9rem;
+        color: var(--muted);
+      }
+      .tight textarea {
+        min-height: 64px;
+      }
+      .numlist {
+        display: grid;
+        grid-template-columns: 28px 1fr;
+        gap: 10px;
+      }
+      .num {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        background: #f8f8f8;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 6px 0;
+        font-weight: 700;
+      }
+      .print-note {
+        font-size: 0.85rem;
+        color: var(--muted);
+        text-align: right;
+        margin-top: -6px;
+      }
+      footer {
+        margin-top: 10px;
+        color: var(--muted);
+        font-size: 0.9rem;
+        text-align: center;
+      }
+      @media print {
+        @page {
+          size: A4;
+          margin: 14mm;
+        }
+        .page {
+          max-width: none;
+          padding: 0;
+        }
+        .print-note {
+          display: none;
+        }
+        a.download {
+          display: none;
+        }
+        textarea {
+          height: 75px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <h1>Game Design Playtest Worksheet</h1>
+        <p class="small">
+          Observe mechanics, dynamics, aesthetics, and overall fun. Keep answers
+          short so you can stay focused on play.
+        </p>
+      </header>
+
+      <div class="section">
+        <div class="grid">
+          <div class="row">
+            <label for="title">Game Title</label
+            ><input id="title" type="text" placeholder="" />
+          </div>
+          <div class="row">
+            <label for="date">Date</label
+            ><input id="date" type="text" placeholder="YYYY-MM-DD" />
+          </div>
+          <div class="row">
+            <label for="players">Players</label
+            ><input id="players" type="text" placeholder="" />
+          </div>
+        </div>
+      </div>
+
+      <hr />
+
+      <div class="section">
+        <h2>1) Mechanics &amp; Components</h2>
+        <div class="numlist">
+          <div class="num">1</div>
+          <div>
+            <label class="small"
+              >List two important mechanics in the game</label
+            >
+            <textarea
+              placeholder="e.g., worker placement, trick-taking, simultaneous selection"
+            ></textarea>
+            <textarea class="tight" placeholder=""></textarea>
+          </div>
+          <div class="num">2</div>
+          <div>
+            <label class="small"
+              >How do the components (cards, board, dice, tokens) support or
+              limit these mechanics?</label
+            >
+            <textarea
+              placeholder="What does each component make easy or hard? Any fiddly bits?"
+            ></textarea>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>2) Dynamics (What emerges during play?)</h2>
+        <div class="numlist">
+          <div class="num">3</div>
+          <div>
+            <label class="small"
+              >What kinds of player interactions happen?</label
+            >
+            <div class="inline-list">
+              <label class="chip"><input type="checkbox" />Competition</label>
+              <label class="chip"><input type="checkbox" />Cooperation</label>
+              <label class="chip"><input type="checkbox" />Negotiation</label>
+              <label class="chip"><input type="checkbox" />Bluffing</label>
+              <label class="chip"><input type="checkbox" />Kingmaking</label>
+              <label class="chip"><input type="checkbox" />Take-that</label>
+              <label class="chip"><input type="checkbox" />Other</label>
+            </div>
+          </div>
+          <div class="num">4</div>
+          <div>
+            <label class="small"
+              >Give one example of an interesting strategy or unexpected
+              moment</label
+            >
+            <textarea
+              placeholder="Describe the situation and what rule or mechanic led to it."
+            ></textarea>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>3) Aesthetics (How does it feel?)</h2>
+        <div class="numlist">
+          <div class="num">5</div>
+          <div>
+            <label class="small"
+              >While playing I felt (check all that apply)</label
+            >
+            <div class="inline-list">
+              <label class="chip"><input type="checkbox" />Excited</label>
+              <label class="chip"><input type="checkbox" />Tense</label>
+              <label class="chip"><input type="checkbox" />Curious</label>
+              <label class="chip"><input type="checkbox" />Frustrated</label>
+              <label class="chip"><input type="checkbox" />Bored</label>
+              <label class="chip"><input type="checkbox" />Relaxed</label>
+              <label class="chip"><input type="checkbox" />Other</label>
+            </div>
+          </div>
+          <div class="num">6</div>
+          <div>
+            <label class="small"
+              >Did the theme &amp; visuals make the game more engaging? Why or
+              why not?</label
+            >
+            <textarea></textarea>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>4) Finding the Fun</h2>
+        <div class="numlist">
+          <div class="num">7</div>
+          <div>
+            <label class="small"
+              >What was the most fun or engaging moment? Why?</label
+            >
+            <textarea></textarea>
+          </div>
+          <div class="num">8</div>
+          <div>
+            <label class="small"
+              >Where did you lose interest, if at all? What caused it?</label
+            >
+            <textarea></textarea>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>5) Identifying Issues</h2>
+        <div class="numlist">
+          <div class="num">9</div>
+          <div>
+            <label class="small">Name one unclear or problematic rule</label>
+            <textarea></textarea>
+          </div>
+          <div class="num">10</div>
+          <div>
+            <label class="small"
+              >Did everyone get to participate equally? If not, what caused
+              imbalance?</label
+            >
+            <textarea></textarea>
+          </div>
+          <div class="num">11</div>
+          <div>
+            <label class="small">Suggest one possible fix or improvement</label>
+            <textarea></textarea>
+          </div>
+        </div>
+      </div>
+
+      <p class="print-note">
+        Tip: Press <strong>Ctrl/Cmd + P</strong> to print. The chose PDF as
+        target.
+      </p>
+      <hr />
+      <footer></footer>
+    </div>
+  </body>
+</html>

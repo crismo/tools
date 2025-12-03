@@ -2,8 +2,9 @@
 This is a collection of random tools and activities that I use in teaching etc.
 
 ## Tools
-Countdown https://crismo.github.io/countdown/?m=5
-Random Generator https://crismo.github.io/rndGenerator/ 
+Countdown https://crismo.github.io/countdown/?m=5  
+Random Generator https://crismo.github.io/rndGenerator/   
+Simple notes https://crismo.github.io/simpleNote/ 
 
 ## Coding 
 "Theft Mystery" https://gist.github.com/crismo/ab1cca6df7b183e876391bdec41d1dcf  
